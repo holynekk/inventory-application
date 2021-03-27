@@ -1,8 +1,80 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+html{
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+body{
+  margin: 0;
+  height: 100%;
+  width: 100%;
 }
 
-a {
-  color: #00B7FF;
+.main-container{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
 }
+
+.side-content{
+  background-color: black;
+  height: 100%;
+  width: 20%;
+}
+
+.content{
+  background-color: rgb(30, 30, 30);
+  height: 100%;
+  width: 80%;
+}
+
+/*--------------- Home Screen ---------------*/
+
+.home{
+  height: 100%;
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home>h1{
+  font-size: 5rem;
+  margin-bottom: 60px;
+}
+
+
+.home>a:hover{
+  text-decoration: none;
+}
+
+.see-button{
+  height: 4rem;
+  width: 16rem;
+  background-color: black;
+  border: 2px solid white;
+  border-radius: 5px;
+  font-family: monospace;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .2s ease-in-out;
+
+  text-decoration: none;
+  color: white;
+}
+
+
+.see-button:hover{
+  transform: scale(1.1);
+}
+/*--------------- Home Screen ---------------*/
+
+/*--------------- All Games Screen ---------------*/
+
+
+
+/*--------------- All Games Screen ---------------*/

@@ -1,5 +1,8 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div(class="home")
+    h1= title
+    a(href="/catalog/games")
+      div(class='see-button')
+        p Let's See the Inventory

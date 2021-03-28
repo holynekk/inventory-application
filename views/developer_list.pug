@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    div(class='dev-content')
+        div(class='devlist-header')
+            h1 Developer List
+        div(class='dev-list')
+            each dev in developer_list
+                a(href=dev.url)
+                    div(class='dev-card')
+                        | #{dev.summary}
+
+            else
+                p There are no developers

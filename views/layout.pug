@@ -11,27 +11,32 @@ html(lang='en')
   body
     div(class='main-container')
       div(class='side-content')
-        ul(class='sidebar-nav')
-          li
-            a(href='/catalog') Home
-          li
-            a(href='/catalog/games') All Games
-          li
-            a(href='/catalog/developers') All Developers
-          li
-            a(href='/catalog/genres') All Genres
-          li
-            a(href='/catalog/gameinstances') All Game-instances
-          li
-            hr
-          li
-            a(href='/catalog/developer/create') Create new Developer
-          li
-            a(href='/catalog/genre/create') Create new Genre
-          li
-            a(href='/catalog/game/create') Create new Game
-          li
-            a(href='/catalog/gameinstance/create') Create new Game instance (copy)
+        h1.side-header HolyNekK Games
+        div(class='white-line') 
+        div(class='sidebar-nav')
+          a(href='/catalog')
+            div(class='side-button') Home
+              
+          a(href='/catalog/games') 
+            div(class='side-button') Games
+          a(href='/catalog/developers') 
+            div(class='side-button') All Developers
+          a(href='/catalog/genres') 
+            div(class='side-button') All Genres
+          a(href='/catalog/gameinstances') 
+            div(class='side-button') All Game-instances
+            
+          hr
+
+          a(href='/catalog/developer/create') 
+            div(class='side-button') Create new Developer
+          a(href='/catalog/genre/create') 
+            div(class='side-button') Create new Genre 
+          a(href='/catalog/game/create') 
+            div(class='side-button') Create new Game
+          a(href='/catalog/gameinstance/create') 
+            div(class='side-button') Create new Game instance (copy)
+            
 
       div(class='content')
         block content

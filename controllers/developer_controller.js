@@ -2,7 +2,10 @@ var Developer = require('../models/developer.js');
 
 // Display list of all developers.
 exports.developer_list = function(req, res) {
-    res.send('NOT IMPLEMENTED: developer list');
+    Developer.find({},'name developer imgUrl genre').exec(function(err, list_devs){
+        if(err){return next(err);}
+        res.render('developer_list', {title: 'Developer List', developer_list: list_devs});
+    });
 };
 
 // Display detail page for a specific developer.

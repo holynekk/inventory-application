@@ -6,6 +6,7 @@ var GameSchema = new Schema({
     name: {type: String, required: true},
     developer: {type: Schema.Types.ObjectId, ref:'Developer', required: true},
     summary: {type: String, required: true},
+    imgUrl: {type: String, required: true},
     genre: [{type: Schema.Types.ObjectId, ref: 'Genre'}]
 });
 

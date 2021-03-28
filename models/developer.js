@@ -4,7 +4,9 @@ var Schema = mongoose.Schema;
 
 var DeveloperSchema = new Schema({
     name: {type: String, required: true},
-    establish_date: {type: Date}
+    imgUrl: {type: String, required: true},
+    establish_date: {type: Date},
+    summary: {type: String, required: true}
 });
 
 DeveloperSchema.virtual('url').get(function(){

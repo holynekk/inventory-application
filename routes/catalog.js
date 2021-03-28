@@ -32,7 +32,7 @@ router.get('/', game_controller.index);
 // router.post('/game/:id/update', game_controller.game_update_post);
 
 // // GET request for one Book.
-// router.get('/game/:id', game_controller.game_detail);
+router.get('/game/:id', game_controller.game_detail);
 
 // GET request for list of all Book items.
 router.get('/games', game_controller.game_list);
@@ -61,7 +61,7 @@ router.get('/games', game_controller.game_list);
 // router.get('/developer/:id', developer_controller.developer_detail);
 
 // // GET request for list of all Authors.
-// router.get('/developers', developer_controller.developer_list);
+router.get('/developers', developer_controller.developer_list);
 
 // /// GENRE ROUTES ///
 

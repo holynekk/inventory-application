@@ -1,3 +1,12 @@
 extend layout
 
-block games
+block content
+    div(class='all-games')
+        each game in game_list
+            a(href=game.url)
+                div(class='game-card')
+                    img(src=game.imgUrl)
+                    p #{game.name}
+                    div(class='genre-section')
+                        each gen in game.genre
+                            div(class='genre-box')= gen

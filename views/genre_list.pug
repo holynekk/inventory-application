@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    div(class='genre-main')
+        div(class='genre-header')
+            h1 Game Tags
+            div(class='white-line')
+        div(class='genre-list')
+            each tag in game_tags
+                div(class='genre-card')
+                    img(src=tag.imgUrl)
+                    p #{tag.name}

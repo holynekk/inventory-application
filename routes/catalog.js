@@ -14,10 +14,10 @@ var genre_controller = require('../controllers/genre_controller.js');
 router.get('/', game_controller.index);
 
 // // GET request for creating a Book. NOTE This must come before routes that display Book (uses id).
-// router.get('/game/create', game_controller.game_create_get);
+router.get('/game/create', game_controller.game_create_get);
 
 // // POST request for creating Book.
-// router.post('/game/create', game_controller.game_create_post);
+router.post('/game/create', game_controller.game_create_post);
 
 // // GET request to delete Book.
 // router.get('/game/:id/delete', game_controller.game_delete_get);
@@ -26,10 +26,10 @@ router.get('/', game_controller.index);
 // router.post('/game/:id/delete', game_controller.game_delete_post);
 
 // // GET request to update Book.
-// router.get('/game/:id/update', game_controller.game_update_get);
+router.get('/game/:id/update', game_controller.game_update_get);
 
 // // POST request to update Book.
-// router.post('/game/:id/update', game_controller.game_update_post);
+router.post('/game/:id/update', game_controller.game_update_post);
 
 // // GET request for one Book.
 router.get('/game/:id', game_controller.game_detail);
@@ -87,7 +87,7 @@ router.get('/developers', developer_controller.developer_list);
 // router.get('/genre/:id', genre_controller.genre_detail);
 
 // // GET request for list of all Genre.
-// router.get('/genres', genre_controller.genre_list);
+router.get('/genres', genre_controller.genre_list);
 
 // /// gameinstance ROUTES ///
 

@@ -5,6 +5,7 @@ var Schema = mongoose.Schema;
 var GenreSchema = new Schema(
   {
     name: {type: String, required: true, minlength: 2, maxlength: 15},
+    imgUrl: {type: String, required: true},
   }
 );
 

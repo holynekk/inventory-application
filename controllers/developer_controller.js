@@ -10,7 +10,7 @@ exports.developer_list = function(req, res) {
 
 // Display detail page for a specific developer.
 exports.developer_detail = function(req, res) {
-    res.send('NOT IMPLEMENTED: developer detail: ' + req.params.id);
+    res.render('dev_detail', );
 };
 
 // Display developer create form on GET.

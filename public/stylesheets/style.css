@@ -218,7 +218,7 @@ body{
   width: 400px;
   height: 200px;
   background-color: white;
-  margin: 40px;
+  margin: 20px;
   text-decoration: none;
   border-radius: 8px;
   display: flex;
@@ -323,3 +323,41 @@ body{
 }
 
 /*--------------- Single Game ---------------*/
+
+/*--------------- Genre List ---------------*/
+
+.genre-main{
+  height: 100%;
+  width: 100%;
+}
+
+.genre-header{
+  width: 100%;
+  color: white;
+}
+
+.genre-list{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.genre-card{
+  height: 270px;
+  width: 190px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  margin: 20px;
+  font-weight: 700;
+}
+
+.genre-card>img{
+  height: 190px;
+  width: 190px;
+}
+
+/*--------------- Genre List ---------------*/

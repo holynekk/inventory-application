@@ -50,8 +50,8 @@ function developerCreate(name, imgUrl,establish_date, summary,cb) {
   }  );
 }
 
-function genreCreate(name, cb) {
-  var genre = new Genre({ name: name });
+function genreCreate(name, imgUrl, cb) {
+  var genre = new Genre({ name: name, imgUrl: 'https://w7.pngwing.com/pngs/456/679/png-transparent-gear-computer-icons-others-miscellaneous-angle-symbol.png' });
        
   genre.save(function (err) {
     if (err) {
@@ -127,16 +127,16 @@ function createGenredevelopers(cb) {
             developerCreate('BioWare', 'https://yt3.ggpht.com/ytc/AAUvwnj2noCXkJIcIdQRW8VCQbGQAv6b684kRtqtyNulrA=s900-c-k-c0x00ffffff-no-rj','1995-02-01', 'BioWare is a Canadian video game developer based in Edmonton, Alberta. It was founded in 1995 by newly graduated medical doctors Ray Muzyka and Greg Zeschuk, alongside Trent Oster, Brent Oster, Marcel Zeschuk and Augustine Yip. As of 2007, the company is owned by American publisher Electronic Arts.',callback);
         },
         function(callback) {
-          genreCreate("Simulation", callback);
+          genreCreate("Simulation", "https://w7.pngwing.com/pngs/456/679/png-transparent-gear-computer-icons-others-miscellaneous-angle-symbol.png",callback);
         },
         function(callback) {
-          genreCreate("Open World", callback);
+          genreCreate("Open World", "https://w7.pngwing.com/pngs/456/679/png-transparent-gear-computer-icons-others-miscellaneous-angle-symbol.png",callback);
         },
         function(callback) {
-          genreCreate("RPG", callback);
+          genreCreate("RPG", "https://w7.pngwing.com/pngs/456/679/png-transparent-gear-computer-icons-others-miscellaneous-angle-symbol.png",callback);
         },
         function(callback) {
-            genreCreate("FPS", callback);
+            genreCreate("FPS", "https://w7.pngwing.com/pngs/456/679/png-transparent-gear-computer-icons-others-miscellaneous-angle-symbol.png", callback);
           },
         ],
         // optional callback

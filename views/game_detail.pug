@@ -24,3 +24,9 @@ block content
                             a(href=instance.url class="pc-instance")
                                 p PC
                                 p #{instance.status}
+    hr
+
+    div(class='update-buttons')
+        a(href=game.url+'/delete' class='delete-button update-button-links') Delete Game
+
+        a(href=game.url+'/update' class='update-button update-button-links') Update Game

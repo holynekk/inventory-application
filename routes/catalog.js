@@ -58,7 +58,7 @@ router.get('/games', game_controller.game_list);
 // router.post('/developer/:id/update', developer_controller.developer_update_post);
 
 // // GET request for one Author.
-// router.get('/developer/:id', developer_controller.developer_detail);
+router.get('/developer/:id', developer_controller.developer_detail);
 
 // // GET request for list of all Authors.
 router.get('/developers', developer_controller.developer_list);

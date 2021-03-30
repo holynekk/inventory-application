@@ -10,7 +10,11 @@ exports.developer_list = function(req, res) {
 
 // Display detail page for a specific developer.
 exports.developer_detail = function(req, res) {
-    res.render('dev_detail', );
+    Developer.findById(req.params.id).exec(function(err, dev){
+        if(err){return next(err);}
+        res.render('dev_detail', {title: dev.name, developer: dev});
+    });
+    
 };
 
 // Display developer create form on GET.

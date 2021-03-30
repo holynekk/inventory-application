@@ -1,0 +1,12 @@
+extends layout 
+
+block content
+    div.dev-detail
+        div(class='dev-det-header')
+            h1= developer.name
+        div(class='white-line')
+        div(class='dev-det-content')
+            img(src=developer.imgUrl class='developer-det-img')
+            div.dev-just-info
+                | Establish Date: #{developer.establish_date}
+                p #{developer.summary}

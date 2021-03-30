@@ -7,6 +7,7 @@ var GameInstanceSchema = new Schema(
   {
     game: { type: Schema.Types.ObjectId, ref: 'Game', required: true },
     platform: {type: String, required: true},
+    price: {type: Number, required: true},
     status: {type: String, required: true, enum: ['Available', 'Maintenance', 'Loaned', 'Reserved'], default: 'Maintenance'},
     due_back: {type: Date, default: Date.now}
   }

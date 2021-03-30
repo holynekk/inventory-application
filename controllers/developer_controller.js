@@ -2,7 +2,7 @@ var Developer = require('../models/developer.js');
 
 // Display list of all developers.
 exports.developer_list = function(req, res) {
-    Developer.find({},'name developer imgUrl genre').exec(function(err, list_devs){
+    Developer.find({},'name imgUrl').exec(function(err, list_devs){
         if(err){return next(err);}
         res.render('developer_list', {title: 'Developer List', developer_list: list_devs});
     });

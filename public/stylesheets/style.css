@@ -20,6 +20,9 @@ body{
   background-color: rgb(30, 30, 30);
   height: 100%;
   width: 80%;
+  background-image: url('https://image.freepik.com/free-vector/black-vector-abstract-background_1340-8573.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .white-line{
@@ -75,8 +78,8 @@ body{
   width: 100%;
   height: 50px;
   color: white;
+  font-weight: 900;
 }
-
 
 
 
@@ -217,7 +220,106 @@ body{
   background-color: white;
   margin: 40px;
   text-decoration: none;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  border: 4px solid rgb(50, 50, 50);
 }
 
+.dev-img{
+  height:180px;
+  width: 180px;
+  border-radius: 15px;
+}
+
+.dev-card{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 20px;
+} 
+
+.dev-card>p{
+  font-size: 2rem;
+  font-weight: 900;
+  color: rgb(30, 30, 30);
+  position: relative;
+  left: 20px;
+}
 
 /*--------------- All Developers Screen ---------------*/
+
+/*--------------- Single Game ---------------*/
+
+.main-game{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  color: white
+}
+
+.main-game-header{
+  position: relative;
+  top: 30px;
+  left: 30px;
+  color: white;
+  margin-bottom: 50px;
+}
+
+.game-info{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.game-info>img{
+  position: relative;
+  left: 30px;
+  height: 450px;
+  width: 350px;
+}
+
+.all-info{
+  position: relative;
+  left: 60px;
+}
+
+.game-info-instances{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.game-info-instances>a{
+  text-decoration: none;
+  color: white;
+  font-size: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-info-instances>a>p{
+  margin: 2px;
+}
+
+.ps4-instance{
+  border: 4px solid blue;
+  border-radius: 6px;
+}
+
+.xbox-instance{
+  border: 2px solid green;
+  border-radius: 6px;
+}
+
+.pc-instance{
+  border: 2px solid gray;
+  border-radius: 6px;
+}
+
+/*--------------- Single Game ---------------*/

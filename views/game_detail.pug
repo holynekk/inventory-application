@@ -1,0 +1,26 @@
+extends layout
+
+block content
+    div(class='main-game')
+        div(class='main-game-header')
+            h1= game.name
+            div(class='white-line')
+        div(class='game-info')
+            img(src=game.imgUrl)
+            div(class='all-info')
+                p Developer Team: #{game.developer.name}
+                p #{game.summary}
+                div(class='game-info-instances')
+                    each instance in game_instances
+                        if instance.platform == 'PS4'
+                            a(href=instance.url class="ps4-instance")
+                                p PS4
+                                p #{instance.status}
+                        if instance.platform == 'XBOX'
+                            a(href=instance.url class="xbox-instance")
+                                p XBOX
+                                p #{instance.status}v
+                        if instance.platform == 'PC'
+                            a(href=instance.url class="pc-instance")
+                                p PC
+                                p #{instance.status}

@@ -86,13 +86,14 @@ function gameCreate(name, imgUrl,summary, developer, genre, cb) {
 }
 
 
-function gameInstanceCreate(game, platform, due_back, status, cb) {
+function gameInstanceCreate(game, platform, price, due_back, status, cb) {
   gameInstanceDetail = { 
     game: game,
-    platform: platform
+    platform: platform,
+    price: price
   }    
-  if (due_back != false) gameInstanceDetail.due_back = due_back
-  if (status != false) gameInstanceDetail.status = status
+  if (due_back != false) gameInstanceDetail.due_back = due_back;
+  if (status != false) gameInstanceDetail.status = status;
     
   var gameinstance = new GameInstance(gameInstanceDetail);    
   gameinstance.save(function (err) {
@@ -175,37 +176,37 @@ function createGames(cb) {
 function createGameInstances(cb) {
     async.parallel([
         function(callback) {
-          gameInstanceCreate(games[0], 'PS4', false, 'Available', callback)
+          gameInstanceCreate(games[0], 'PS4', 35, false, 'Available', callback)
         },
         function(callback) {
-          gameInstanceCreate(games[1], ' PC', false, 'Loaned', callback)
+          gameInstanceCreate(games[1], ' PC', 12, false, 'Loaned', callback)
         },
         function(callback) {
-          gameInstanceCreate(games[2], ' XBOX ONE', false, false, callback)
+          gameInstanceCreate(games[2], ' XBOX ONE', 23, false, false, callback)
         },
         function(callback) {
-          gameInstanceCreate(games[3], 'PS4', false, 'Available', callback)
+          gameInstanceCreate(games[3], 'PS4', 60, false, 'Available', callback)
         },
         function(callback) {
-          gameInstanceCreate(games[3], 'PC', false, 'Available', callback)
+          gameInstanceCreate(games[3], 'PC', 25, false, 'Available', callback)
         },
         function(callback) {
-          gameInstanceCreate(games[3], 'PS4', false, 'Available', callback)
+          gameInstanceCreate(games[3], 'PS4', 45, false, 'Available', callback)
         },
         function(callback) {
-          gameInstanceCreate(games[4], 'XBOX', false, 'Available', callback)
+          gameInstanceCreate(games[4], 'XBOX', 50, false, 'Available', callback)
         },
         function(callback) {
-          gameInstanceCreate(games[4], 'PS4', false, 'Maintenance', callback)
+          gameInstanceCreate(games[4], 'PS4', 40, false, 'Maintenance', callback)
         },
         function(callback) {
-          gameInstanceCreate(games[4], 'PC', false, 'Loaned', callback)
+          gameInstanceCreate(games[4], 'PC', 30, false, 'Loaned', callback)
         },
         function(callback) {
-          gameInstanceCreate(games[0], 'PC', false, false, callback)
+          gameInstanceCreate(games[0], 'PC', 40, false, false, callback)
         },
         function(callback) {
-          gameInstanceCreate(games[1], 'PS4', false, false, callback)
+          gameInstanceCreate(games[1], 'PS4', 30, false, false, callback)
         }
         ],
         // Optional callback

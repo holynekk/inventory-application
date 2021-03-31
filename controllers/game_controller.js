@@ -128,12 +128,37 @@ exports.game_create_post = [
 
 // Display game delete form on GET.
 exports.game_delete_get = function(req, res) {
-    res.send('NOT IMPLEMENTED: game delete GET');
+    async.parallel({
+        game: function(callback) {
+          Game.find({ '_id': req.params.id }).exec(callback)
+        },
+    }, function(err, results) {
+        if (err) { return next(err); }
+        if (results.game==null) { // No results.
+            res.redirect('/catalog/games');
+        }
+        // Successful, so render.
+        res.render('game_delete', { title: 'Delete Game', game: results.game} );
+    });
 };
 
 // Handle game delete on POST.
-exports.game_delete_post = function(req, res) {
-    res.send('NOT IMPLEMENTED: game delete POST');
+exports.game_delete_post = function(req, res, next) {
+    async.parallel({
+        game: function(callback) {
+            Game.findById(req.body.gameid).exec(callback);
+          },
+    }, function(err, results) {
+        if (err) { return next(err); }
+        // Success
+        else {
+            Game.findByIdAndRemove(req.body.gameid, function(err) {
+                if (err) { return next(err); }
+                // Success - go to author list
+                res.redirect('/catalog/games');
+            })
+        }
+    });
 };
 
 // Display game update form on GET.

@@ -1,0 +1,28 @@
+extends layout
+
+block content
+    div(class='main-game')
+        div(class='main-game-header')
+            h1 #{gameInstance.game.name}, #{gameInstance.platform}
+            div(class='white-line')
+        div(class='game-info')
+            img(src=gameInstance.game.imgUrl)
+            div(class='all-info')
+                p Developer: #{gameInstance.game.developer.name}
+                p #{gameInstance.game.summary}
+                p.price-tag #{gameInstance.price}$
+                br
+                br
+                p #[strong Status:]
+                if gameInstance.status=='Available'
+                    span.text-success #{gameInstance.status}
+                else if gameInstance.status=='Maintenance'
+                    span.text-danger #{gameInstance.status}
+                else
+                    span.text-warning #{gameInstance.status}
+
+                if gameInstance.status!='Available'
+                    p #[strong Due back:] #{gameInstance.due_back}
+
+                a(href= gameInstance.url + '/update')
+                    | UPDATE

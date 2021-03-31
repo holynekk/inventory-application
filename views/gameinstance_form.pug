@@ -1,0 +1,41 @@
+extends layout
+
+block content
+    div(class='form-center')
+        h1(class='formtitle') #{title}
+        div(class='white-line')
+
+        form(method='POST' action='')
+            div.form-group
+                label(for='game') Game:
+                select#game.form-control(type='select' placeholder='Select game' name='game' required='true')
+                    for game in game_list
+                        if gameinstance
+                            option(value=game._id selected=(gameinstance.game.toString()==game._id.toString() ? 'selected' : false)) #{game.name}
+                        else
+                            option(value=game._id) #{game.name}
+
+            div.form-group
+                label(for='platform') Platform:
+                input#platform.form-control(type='text' placeholder='Gaming platform that game has released' name='platform' required='true' value=(undefined===gameinstance ? '' : gameinstance.platform))
+            div.form-group
+                label(for='due_back') Date when game available:
+                input#due_back.form-control(type='date' name='due_back' value=(undefined===gameinstance ? '' : gameinstance.due_back))
+            div.form-group
+                label(for='price') Price of the game:
+                input#price.form-control(type='number' name='price' value=(undefined===gameinstance ? '' : gameinstance.price))
+
+            div.form-group
+                label(for='status') Status:
+                select#status.form-control(type='select' placeholder='Select status' name='status' required='true')
+                    option(value='Maintenance') Maintenance
+                    option(value='Available') Available
+                    option(value='Loaned') Loaned
+                    option(value='Reserved') Reserved
+
+            button.btn.btn-primary(type='submit') Submit
+
+        if errors
+            ul
+                for error in errors
+                    li!= error.msg

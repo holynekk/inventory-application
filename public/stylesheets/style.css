@@ -57,6 +57,10 @@ body{
 .delete-button{
   background-color: lightcoral;
   border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .update-button{

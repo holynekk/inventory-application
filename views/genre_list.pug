@@ -10,3 +10,5 @@ block content
                 div(class='genre-card')
                     img(src=tag.imgUrl)
                     p #{tag.name}
+                    a(class='update-button-links' href= tag.url + '/delete')
+                        div(class='delete-button') Delete

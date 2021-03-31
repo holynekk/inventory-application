@@ -1,3 +1,19 @@
+@font-face{
+  font-family: 'main-header';
+  src: url('../fonts/Nothing\ Clean.ttf');
+}
+
+@font-face{
+  font-family: 'side-header';
+  src: url('../fonts/roman_font_7.ttf');
+}
+
+@font-face{
+  font-family: 'side-letter';
+  src: url('../fonts/TheStudentsTeacher-Regular.ttf');
+}
+
+
 html{
   margin: 0;
   height: 100%;
@@ -95,6 +111,7 @@ body{
 .side-header{
   color: white;
   margin-top: 40px;
+  font-family: 'side-header';
 }
 
 .sidebar-nav{
@@ -113,6 +130,8 @@ body{
   width: 100%;
   background-color: rgb(20, 20, 20);
   transition: all 0.2s ease-in-out;
+  font-family: 'side-letter';
+  font-size: 1.4rem;
 }
 
 .sidebar-nav>a:hover{
@@ -147,8 +166,9 @@ body{
 }
 
 .home>h1{
-  font-size: 5rem;
+  font-size: 8rem;
   margin-bottom: 60px;
+  font-family: 'main-header';
 }
 
 
@@ -235,6 +255,15 @@ body{
   flex-direction: row;
   justify-content: flex-start;
 }
+
+.game-name{
+  color: black;
+  font-weight: 900;
+  font-size: 1.3rem;
+  font-family: 'side-letter';
+  margin-top: 20px;
+}
+
 
 /*--------------- All Games Screen ---------------*/
 
@@ -353,7 +382,19 @@ body{
   justify-content: flex-start;
 }
 
-.game-info>img{
+
+.single-del{
+  margin: 10px auto 0px 150px;
+}
+
+.single-game-image{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.single-game-image>img{
   position: relative;
   left: 30px;
   height: 450px;
@@ -382,23 +423,17 @@ body{
   align-items: center;
 }
 
-.game-info-instances>a>p{
-  margin: 2px;
+.game-info-instances>a>img{
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
 }
 
-.ps4-instance{
-  border: 4px solid blue;
-  border-radius: 6px;
-}
-
-.xbox-instance{
-  border: 2px solid green;
-  border-radius: 6px;
-}
-
-.pc-instance{
-  border: 2px solid gray;
-  border-radius: 6px;
+.header-edit{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
 }
 
 /*--------------- Single Game ---------------*/
@@ -469,9 +504,60 @@ body{
   color: white;
 }
 
+.edit-image{
+  margin-left: 10px;
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
+  transition: all 0.1s ease-in-out;
+}
+
+.edit-image:hover{
+  transform: scale(1.2);
+}
 
 
 /*--------------- Respnsive Design ---------------*/
 
+ /* @media(max-width: 1100px){
+  .side-content{
+    background-color: blue;
+  }
+  .sidebar-nav{
+    gap: 5px;
+  }
+  .side-header{
+    margin-top: 10px;
+  }
+} */
+
+/* Mobile Devices */
+
+/* @media(max-width: 600px){
+  .main-container{
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+  .content{
+    width: 100%;
+    height: auto;
+  }
+  .side-content{
+    background-color: red;
+    width: 100%;
+    height: 500px;
+    gap: 5px;
+    border-right: none;
+    overflow-y: auto;
+  }
+  .sidebar-nav{
+    gap: 5px;
+  }
+  .side-header{
+    margin-top: 10px;
+  }
+}  */
 
 /*--------------- Respnsive Design ---------------*/
+

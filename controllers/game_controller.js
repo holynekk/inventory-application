@@ -15,7 +15,6 @@ exports.index = function(req, res) {
 exports.game_list = function(req, res, next) {
     Game.find({}, 'name developer imgUrl genre').populate('developer').exec(function(err, list_games){
         if(err){return next(err);}
-
         res.render('game_list', {title: 'Holy Games List', game_list: list_games});
     });
 };

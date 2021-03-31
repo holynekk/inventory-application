@@ -3,30 +3,28 @@ extends layout
 block content
     div(class='main-game')
         div(class='main-game-header')
-            h1= game.name
+            div(class='header-edit')
+                h1= game.name
+                a(href=game.url+'/update')
+                    img(class='edit-image' src='https://www.pngitem.com/pimgs/m/116-1167824_website-webpage-edit-copyright-seo-tools-pen-circle.png')
             div(class='white-line')
         div(class='game-info')
-            img(src=game.imgUrl)
+            div(class='single-game-image')
+                img(src=game.imgUrl)
+                a(href=game.url+'/delete' class='delete-button update-button-links single-del') Delete Game
             div(class='all-info')
                 p Developer Team: #{game.developer.name}
                 p #{game.summary}
                 div(class='game-info-instances')
                     each instance in game_instances
                         if instance.platform == 'PS4'
-                            a(href=instance.url class="ps4-instance")
-                                p PS4
-                                p #{instance.status}
+                            a(href=instance.url)
+                                img(class='instance-logo' src='https://i.pinimg.com/originals/ca/be/7a/cabe7a7e2371300bc8efa3f19e4808a2.jpg')
                         if instance.platform == 'XBOX'
-                            a(href=instance.url class="xbox-instance")
-                                p XBOX
-                                p #{instance.status}v
+                            a(href=instance.url)
+                                img(class='instance-logo' src='data:image/png;base64,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')
                         if instance.platform == 'PC'
-                            a(href=instance.url class="pc-instance")
-                                p PC
-                                p #{instance.status}
-    hr
+                            a(href=instance.url)
+                                img(class='instance-logo' src='https://e7.pngegg.com/pngimages/699/999/png-clipart-brand-logo-steam-gump-s.png')
 
-    div(class='update-buttons')
-        a(href=game.url+'/delete' class='delete-button update-button-links') Delete Game
-
-        a(href=game.url+'/update' class='update-button update-button-links') Update Game
+        

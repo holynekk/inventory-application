@@ -52,10 +52,10 @@ router.get('/developer/:id/delete', developer_controller.developer_delete_get);
 router.post('/developer/:id/delete', developer_controller.developer_delete_post);
 
 // // GET request to update Author.
-// router.get('/developer/:id/update', developer_controller.developer_update_get);
+router.get('/developer/:id/update', developer_controller.developer_update_get);
 
 // // POST request to update Author.
-// router.post('/developer/:id/update', developer_controller.developer_update_post);
+router.post('/developer/:id/update', developer_controller.developer_update_post);
 
 // // GET request for one Author.
 router.get('/developer/:id', developer_controller.developer_detail);

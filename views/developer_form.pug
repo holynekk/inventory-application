@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h1=title
+
+  form(method='POST' action='')
+    div.form-group
+      label(for='name') Company Name:
+      input#name.form-control(type='text' placeholder='Name of the Compmany' name='name' required='true' value=(undefined===developer ? '' : developer.name) )
+    div.form-group
+      label(for='summary') Summary:
+      input#summary.form-control(type='textarea' placeholder='Give us a brief summary of the company' name='summary' value=(undefined===developer ? '' : developer.summary))
+
+    div.form-group
+      label(for='imgUrl') Url of any image:
+      input#imgUrl.form-control(type='text' placeholder='An image url for the company.' name='imgUrl' value=(undefined===developer ? '' : developer.imgUrl))
+
+    div.form-group
+      label(for='establish_date') Establish Date:
+      input#establish_date.form-control(type='date' name='date_of_birth' value=(undefined===developer ? '' : developer.establish_date) )
+    button.btn.btn-primary(type='submit') Submit
+  if errors
+    ul
+      for error in errors
+        li!= error.msg

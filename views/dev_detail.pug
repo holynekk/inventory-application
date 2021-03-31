@@ -10,3 +10,7 @@ block content
             div.dev-just-info
                 | Establish Date: #{developer.establish_date}
                 p #{developer.summary}
+        div(class='update-buttons')
+            a(href=developer.url+'/delete' class='delete-button update-button-links') Delete Dev.
+
+            a(href=developer.url+'/update' class='update-button update-button-links') Update Dev.

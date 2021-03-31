@@ -9,4 +9,5 @@ block content
                     p #{game.name}
                     div(class='genre-section')
                         each gen in game.genre
-                            div(class='genre-box')= gen
+                            div(class='genre-box')
+                                p #{gen.name}

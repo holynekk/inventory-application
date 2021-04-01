@@ -497,6 +497,7 @@ body{
 
 .formtitle{
   color: white;
+  margin-top: 20px;
 }
 
 .form-group{
@@ -516,6 +517,12 @@ body{
   transform: scale(1.2);
 }
 
+.form-center{
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
 
 /*--------------- Respnsive Design ---------------*/
 

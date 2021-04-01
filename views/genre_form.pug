@@ -1,16 +1,18 @@
 extends layout
 
 block content
-  h1 #{title}
-
-  form(method='POST' action='')
-    div.form-group
-      label(for='name') Genre:
-      input#name.form-control(type='text', placeholder='RPG, Open World etc.' name='name' value=(undefined===genre ? '' : genre.name))
-    div.form-group
-      label(for='imgUrl') Genre:
-      input#imgUrl.form-control(type='text', placeholder='Url of your game tag image.' name='imgUrl' value=(undefined===genre ? '' : genre.imgUrl))
-    button.btn.btn-primary(type='submit') Submit
+  
+  div(class='form-center')
+    h1.formtitle= title
+    div(class='white-line')
+    form(method='POST' action='')
+      div.form-group
+        label(for='name') Genre:
+        input#name.form-control(type='text', placeholder='RPG, Open World etc.' name='name' value=(undefined===genre ? '' : genre.name))
+      div.form-group
+        label(for='imgUrl') Genre:
+        input#imgUrl.form-control(type='text', placeholder='Url of your game tag image.' name='imgUrl' value=(undefined===genre ? '' : genre.imgUrl))
+      button.btn.btn-primary(type='submit') Submit
 
   if errors
    ul
